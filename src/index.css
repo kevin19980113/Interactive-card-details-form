@@ -1,0 +1,232 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-Gtayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+  --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --input-errors: hsl(0, 100%, 66%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Space Grotesk", sans-serif;
+  overflow-y: hidden;
+}
+
+main {
+  display: flex;
+}
+
+.backgroundImg {
+  height: 100vh;
+}
+
+.CardDetailWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.cardDetailForm {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardInfoLabel {
+  color: var(--very-dark-violet);
+  margin: 0.5rem 0 0.8rem 0;
+  font-size: 0.8rem;
+}
+
+.cardInfoInput {
+  padding: 0.7rem 0.8rem;
+  border: 2px solid var(--dark-grayish-violet);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  color: var(--very-dark-violet);
+  font-size: 1.05rem;
+  transition: border-color 0.4s ease-in;
+  -webkit-transition: border-color 0.3s ease-out;
+}
+
+.cardInfoInput:focus {
+  outline: none !important;
+  border-color: hsl(278, 77%, 43%);
+}
+
+.expCvcContainer {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.expContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.expInputContainer {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.expInputContainer input {
+  width: 50%;
+}
+
+.expInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.cvcContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.confirm {
+  width: 100%;
+  background-color: var(--very-dark-violet);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+  -webkit-transition: background-color 0.3s ease-in;
+}
+
+.confirm:hover,
+.continue:hover {
+  background-color: hsl(278, 49%, 40%);
+}
+
+.cardFrontImg {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  z-index: 1;
+  color: white;
+}
+
+.cardBackImg {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  z-index: 2;
+  color: white;
+}
+
+.cardMark {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.firstCircle {
+  background-color: white;
+  border: 1px solid transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.secondCircle {
+  border: 1px solid white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.cardNumber {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  letter-spacing: 7px;
+}
+
+.cardHolder {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+
+.expDate {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+}
+
+.cvcNumber {
+  position: absolute;
+  top: 43.5%;
+  left: 80%;
+}
+
+.errorMessage {
+  color: var(--input-errors);
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+.errorBorder {
+  border-color: var(--input-errors);
+}
+
+.errorBorder:focus {
+  border-color: var(--input-errors);
+}
+
+.completedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+.completedContainer h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--very-dark-violet);
+}
+
+.completedContainer p {
+  color: var(--dark-grayish-violet);
+}
+
+.continue {
+  padding: 1rem 10rem;
+  background-color: var(--very-dark-violet);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease-out;
+  -webkit-transition: background-color 0.3s ease-out;
+  margin-top: 2rem;
+}
