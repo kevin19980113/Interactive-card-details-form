@@ -4,4 +4,5 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [million.vite({ auto: true }), react()],
+  base: "/Interactive-card-details-form/",
 });
